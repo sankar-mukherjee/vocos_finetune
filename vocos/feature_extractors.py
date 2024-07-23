@@ -49,6 +49,15 @@ class MelSpectrogramFeatures(FeatureExtractor):
         return features
 
 
+class MelSpectrogramFeatures_TeacherForced(FeatureExtractor):
+    def __init__(self):
+        super().__init__()
+
+    def forward(self, mel, **kwargs):
+        features = safe_log(mel)
+        return features
+    
+    
 class EncodecFeatures(FeatureExtractor):
     def __init__(
         self,

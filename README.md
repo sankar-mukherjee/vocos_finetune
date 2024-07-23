@@ -1,3 +1,14 @@
+## Changelog 
+for finetuning pre-trained vocos model with mels genarated from any tts decoder use
+
+```
+bash scripts/exp/finetune.sh
+```
+
+it uses `vocos_finetune_version15model_with_version17data.yaml` configuration file. This assumes predicted mels are in `data/teacher_forced_mels` folder and `data/filelist.train` contains the original wav locations.
+
+##
+
 # Vocos: Closing the gap between time-domain and Fourier-based neural vocoders for high-quality audio synthesis
 
 [Audio samples](https://gemelo-ai.github.io/vocos/) |
